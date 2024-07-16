@@ -1,0 +1,2 @@
+INSERT INTO MEMBER (EMAIL, USERNAME) VALUES ('test1@test.com', 'test1');
+INSERT INTO MEMBER (EMAIL, USERNAME) VALUES ('test2@test.com', 'test2');

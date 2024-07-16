@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:test
+    url: jdbc:h2:mem:test;MODE=MySQL;
     driver-class-name: org.h2.Driver
     username: sa
     password: password
@@ -10,6 +10,10 @@ spring:
       enabled: true
       path: /h2-console
 
+  sql:
+    init:
+      mode: always
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,6 +21,8 @@ spring:
       hibernate:
         format_sql: true
         show_sql: true
+    # ddl-auto 이후 schema.sql -> data.sql 실행
+    defer-datasource-initialization: true
 
 server:
   port: 8080
